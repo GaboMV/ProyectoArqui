@@ -110,3 +110,34 @@ DEPENDENCIA:
 Como: Mediante un administrador. 
 Quiero: Que el sistema le muestre al administrador un reporte de la estadia de vehículos .
 De forma que: El admistrador pueda corroborar la información y tener un control de esta.
+
+
+
+
+
+
+# N	Requerimientos funcionales
+1	Registro nuevo usuario
+2	Eliminación de usuarios
+3	Edición de usuarios
+4	Login del sistema
+5	Cierre de sesión
+6	Registro de ingreso y salida del sistema
+7	Seguimiento de empelados
+8	Asignación de roles a usuarios
+9	Registro de ingreso de vehículos
+10	Registro de salida de vehículos
+11	Edición de estadías
+12	Eliminación de estadías
+13	Seguimiento de estadías
+14	Calculo de estadía
+
+
+
+# N	Requerimientos no funcionales
+1	Confiabilidad
+2	Disponibilidad
+3	Mantenimiento
+4	Seguridad
+5	Exactitud
+
