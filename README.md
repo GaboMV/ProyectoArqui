@@ -1,143 +1,27 @@
-# Sistema de administración de un parqueo
+# Project
 
-# PROBLEMA
-Que forma existe de administrar eficientemente un parqueo y llevar la administración de este en lo que se refiere al control del personal.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.18.
 
-# PROPUESTA GENERAL DE SOLUCIÓN
-Diseñar y desarrollar un sistema orientado a la administración de un parqueo que tenga 2 tipos de roles: administrativo y de personal los cuales permitirán tener un mayor o meno acceso respectivamente en lo que se refiere a la administración.
+## Development server
 
-# VALOR PARA EL NEGOCIO
-Implementar un sistema de información de administración de un parqueo orientado a las ventas y al control de empleados que permita la automatización de procesos y un control eficiente.
-# TANGIBLE
-- Automatizar procesos haciéndolos más eficientes.
-- Controlar a los empleados maximizando su desempeño.
-- Evitar malos cálculos a la hora de hacer el cobro por el parqueo minimizando las perdidas.
-# INTANGIBLE
--Mayor conformidad con empleados y clientes
--Mayor confianza en los datos del desempeño del parqueo.
--Mayor desempeño de los empleados.
-# FACTIBILIDAD (ANÁLISIS DE RIESGOS)
-# ECONOMICA
-- El sistema costara 10000 bs.
+Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-# TECNICA
-- Se necesitará diseñar la base de datos en mysql.
-- Se necesitara diseñar interfaces amigables y atractivas para los usuarios.
+## Code scaffolding
 
-# LISTADO DE REQUERIMIENTOS CON HISTORIAS DE USUARIOS
-# Registro de nuevos usuarios
-Como: Mediante un administrador
-Quiero: Registrar nuevos usuarios 
-De forma que: Se ingresen estos en la base de datos y se puedan definir roles dentro de los nuevos usuarios entre administradores o empleados
+Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
-# Eliminación de usuarios 
-Como: Mediante un administrador
-Quiero: eliminar usuarios 
-De forma que: Se realice una eliminación lógica en la base de datos
+## Build
 
-# Actualización de información de usuarios
-Como: Mediante un administrador
-Quiero: Actualizar la información de un usuario
-De forma que: Se actualice la información de un usuario en la base de datos.
+Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
 
-# Ingreso al sistema
-Como: Mediante un administrador o empleado
-Quiero: Ingresar al sistema mediante un usuario y una contraseña
-De forma que: El sistema realice una autenticación de usuarios y filtre estos para permitirles acceder a diferentes niveles del sistema en función a su jerarquía.
+## Running unit tests
 
-# Cierre de sesión
-Como: Mediante un administrador o empleado
-Quiero: Cerrar sesión en el sistema
-De forma que: una vez que el empleado termina su labor cierre su sesión y que el sistema registre esto
+Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
-# Control de ingreso al sistema
-Como: Mediante un administrador o empleado
-Quiero: Que el sistema registre la hora de ingreso y salida de este.
-De forma que: Se guarde esta información en la base de datos para un posterior reporte de datos.
-DEPENDENCIA:
+## Running end-to-end tests
 
--Ingreso al sistema
--Cierre de sesión.
+Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
 
+## Further help
 
-# Reporte de empleados
-Como: Mediante un administrador 
-Quiero: Que el sistema muestre un registro con la información de los empleados con sus horarios de ingreso y salida del sistema
-De forma que: El administrador obtenga un reporte donde se muestre de forma clara la información.
-DEPENDENCIA:
-
--Ingreso al sistema
--Cierre de sesión.
--Control de ingreso al sistema.
-
-
-
-# Registro de entrada Vehículos
-Como: Mediante un administrador o empleado. 
-Quiero: Que el sistema registre y guarde en la base de datos la información de la entrada de un vehículo.
-De forma que: El usuario ingrese la información del dueño del vehículos y esta se guarde exitosamente.
-
-
-# Registro de Salida Vehículos
-Como: Mediante un administrador o empleado. 
-Quiero: Que el sistema registre y guarde en la base de datos la información de la salida de un vehículo y permita realizar el cálculo de sus estadías.
-De forma que: Se realice un cálculo preciso para que el usuario pueda realizar el cobro y se guarde esta información en la base de datos.
-
-DEPENDENCIA:
-
--Registro entrada de vehículos.
-
-# Edición de estadía Vehículos
-Como: Mediante un administrador. 
-Quiero: Que el sistema permita editar la estadía de un vehículo en caso de existir alguna incongruencia.
-De forma que: Se eviten malos cálculos por algún error de un usuario o el sistema.	
-
-DEPENDENCIA:
-
--Registro entrada de vehículos.
--Registro salida de vehículos.
-
-# Eliminación de estadía Vehículos
-Como: Mediante un administrador. 
-Quiero: Que el sistema permita una eliminación lógica la estadía de un vehículo en caso de existir alguna incongruencia.
-De forma que: Se eviten malos cálculos por algún error de un usuario o el sistema.
-DEPENDENCIA:
-
--Registro entrada de vehículos.
--Registro salida de vehículos.
-
-# Reporte de estadía Vehículos
-Como: Mediante un administrador. 
-Quiero: Que el sistema le muestre al administrador un reporte de la estadia de vehículos .
-De forma que: El admistrador pueda corroborar la información y tener un control de esta.
-
-
-
-
-
-
-# N	Requerimientos funcionales
-1	Registro nuevo usuario
-2	Eliminación de usuarios
-3	Edición de usuarios
-4	Login del sistema
-5	Cierre de sesión
-6	Registro de ingreso y salida del sistema
-7	Seguimiento de empelados
-8	Asignación de roles a usuarios
-9	Registro de ingreso de vehículos
-10	Registro de salida de vehículos
-11	Edición de estadías
-12	Eliminación de estadías
-13	Seguimiento de estadías
-14	Calculo de estadía
-
-
-
-# N	Requerimientos no funcionales
-1	Confiabilidad
-2	Disponibilidad
-3	Mantenimiento
-4	Seguridad
-5	Exactitud
-
+To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.

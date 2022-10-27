@@ -1,0 +1,99 @@
+<app-navbar></app-navbar>
+<button class="btn btn-success pull-right" routerLink="/registro-estadia"  style="background-color:#6B7A40" >
+
+  registrar estadia</button>
+<table class="table justify-content-center text-center">
+  <thead>
+  <tr>
+    <th>Nro</th>
+    <th>costo</th>
+    <th>ingreso</th>
+    <th>salida</th>
+    <th>Usuario</th>
+
+    <th>vehiculo</th>
+
+    <th>espacio</th>
+  </tr>
+  </thead>
+  <tbody>
+
+
+
+  <tr *ngFor="let usuario of Usuarios ; index as i" class="tableRow">
+    <td>
+      {{usuario.idEstadia}}
+    </td>
+    <td>
+      {{usuario.costo}}
+    </td>
+    <td>
+      {{usuario.ingreso}}
+    </td>
+    <td>
+      {{usuario.salida}}
+    </td>
+    <td>
+      {{usuario.idUsuario}}
+    </td>
+    <td>
+      {{usuario.idVehiculo}}
+    </td>
+    <td>
+      {{usuario.espacio}}
+    </td>
+    <td>
+      <button class="btn btn-success pull-right" id="edit"  (click)="alertaedit(usuario)" data-bs-toggle="modal" data-bs-target="#modalEditUsuario" style="background-color:#034d9f" ><a style="color: #F3EDE0" > Editar </a> </button>
+      <button class="btn btn-success pull-right" id="elim"  (click)="alertaelim(usuario.idEstadia)" style="background-color:#ff2828" ><a style="color: #F3EDE0" > Eliminar </a> </button>
+    </td>
+
+  </tr>
+
+  </tbody>
+</table>
+
+
+
+<div class="modal fade" id="modalEditUsuario" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+     aria-labelledby="staticBackdropLabel" aria-hidden="true" >
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="titulo">Editar rol de usuario</h5>
+        <button id="cerrar" type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" #cerrarEdit></button>
+      </div>
+      <form > <!--(ngSubmit)="editarUsuario()"-->
+        <div class="modal-body">
+          <div class="form-group formulario">
+            <label for="nombree">horario de ingreso </label>
+            <input type="text" class="form-control" [(ngModel)]="ue.ingreso"  id="nombree" placeholder="horario de ingreso" required
+                   name="nombre" >
+          </div>
+          <div class="form-group  formulario">
+            <label for="usuarioe">horario de salida</label>
+            <input type="text" class="form-control"  [(ngModel)]="ue.salida" id="usuarioe" placeholder="horario de salida" required
+                   name="usuarioe">
+          </div>
+          <div class="form-group  formulario">
+            <label for="prioridade">costo</label>
+            <input type="text" class="form-control" [(ngModel)]="ue.costo" id="prioridade" placeholder="costo" required
+                   name="materno">
+          </div>
+          <div class="form-group  formulario">
+            <label for="prioridade">espacio</label>
+            <input type="text" class="form-control" [(ngModel)]="ue.espacio" id="espacioe" placeholder="espacio" required
+                   name="materno">
+          </div>
+
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"  (click)="saveEditedUser()">Guardar</button>
+
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

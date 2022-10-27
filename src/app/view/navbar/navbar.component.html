@@ -1,0 +1,61 @@
+
+<nav class="navbar navbar-expand-lg" style="background-color: #F3EDE0">
+  <!-- Container wrapper -->
+  <div class="container">
+    <!-- Navbar brand -->
+    <a class="navbar-brand me-2" >
+      <img
+        src="https://e7.pngegg.com/pngimages/442/214/png-clipart-parking-transport-business-unacor-corretora-de-seguros-business-text-trademark.png"
+        height="100"
+        alt=""
+        loading="lazy"
+        style="margin-top: -1px;"
+      />
+    </a>
+
+    <!-- Toggle button -->
+    <button
+      class="navbar-toggler"
+      type="button"
+
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <i class="fas fa-bars"></i>
+    </button>
+
+    <!-- Collapsible wrapper -->
+    <div
+      class="collapse navbar-collapse"
+      id="navbarButtonsExample"
+      mdbCollapse
+
+    >
+
+      <!-- Left links -->
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+
+      </ul>
+      <!-- Left links -->
+
+      <div class="d-flex align-items-center">
+
+        <button type="button"   (click)="alertacierre()" class="btn btn-danger me-3 ">
+          Cerrar sesion
+        </button>
+        <button class="btn btn-success pull-right" routerLink="/lista-vehiculo"  style="background-color:#6B7A40" >
+
+          Lista vehiculos</button>
+        <button class="btn btn-success pull-right" routerLink="/lista-estadia"  style="background-color:#6B7A40" >
+
+          lista estadia</button>
+
+
+      </div>
+    </div>
+    <!-- Collapsible wrapper -->
+  </div>
+  <!-- Container wrapper -->
+</nav>
+<!-- Navbar -->

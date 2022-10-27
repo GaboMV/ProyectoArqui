@@ -1,0 +1,84 @@
+<app-navbar></app-navbar>
+
+<button class="btn btn-success pull-right" routerLink="/registro"  style="background-color:#6B7A40" >
+
+  registrar usuario</button>
+<table class="table justify-content-center text-center">
+  <thead>
+  <tr>
+    <th>Nro</th>
+    <th>Usuario</th>
+    <th>Nombre</th>
+    <th>Prioridad</th>
+
+    <th>Acciones</th>
+  </tr>
+  </thead>
+  <tbody>
+
+
+
+  <tr *ngFor="let usuario of Usuarios ; index as i" class="tableRow">
+    <td>
+      {{usuario.idUsuario}}
+    </td>
+    <td>
+      {{usuario.nombre}}
+    </td>
+    <td>
+      {{usuario.usuario}}
+    </td>
+    <td>
+      {{usuario.prioridad}}
+    </td>
+
+    <td>
+      <button class="btn btn-success pull-right" id="edit"  (click)="alertaedit(usuario)" data-bs-toggle="modal" data-bs-target="#modalEditUsuario" style="background-color:#034d9f" ><a style="color: #F3EDE0" > Editar </a> </button>
+      <button class="btn btn-success pull-right" id="elim"  (click)="alertaelim(usuario.idUsuario)" style="background-color:#ff2828" ><a style="color: #F3EDE0" > Eliminar </a> </button>
+    </td>
+
+  </tr>
+
+  </tbody>
+</table>
+
+
+
+<div class="modal fade" id="modalEditUsuario" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+     aria-labelledby="staticBackdropLabel" aria-hidden="true" >
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="titulo">Editar Sacramento</h5>
+        <button id="cerrar" type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" #cerrarEdit></button>
+      </div>
+      <form > <!--(ngSubmit)="editarUsuario()"-->
+        <div class="modal-body">
+          <div class="form-group formulario">
+            <label for="nombree">Nombre </label>
+            <input type="text" class="form-control" [(ngModel)]="ue.nombre"  id="nombree" placeholder="nombre" required
+                    name="nombre" >
+          </div>
+          <div class="form-group  formulario">
+            <label for="usuarioe">Usuario</label>
+            <input type="text" class="form-control"  [(ngModel)]="ue.usuario" id="usuarioe" placeholder="usuario" required
+                   name="usuarioe">
+          </div>
+          <div class="form-group  formulario">
+            <label for="prioridade">Prioridad</label>
+            <input type="text" class="form-control" [(ngModel)]="ue.prioridad" id="prioridade" placeholder="prioridad" required
+                   name="materno">
+          </div>
+
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"  (click)="saveEditedUser()">Guardar</button>
+
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
